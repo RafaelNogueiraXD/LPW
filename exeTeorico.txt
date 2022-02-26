@@ -1,0 +1,59 @@
+Qual dos conceitos de programação orientada a objetos que permite a criação de métodos com a mesma
+assinatura, porém com implementações diferentes? 
+d) Interface
+
+Assinale a opção que apresenta a característica que permite que classes derivadas de uma classe superior
+executem métodos com mesma assinatura.
+a) Herança
+
+Na programação orientada a objetos, o programador pode definir classes sem qualquer pretensão de
+instanciar objetos. Nestas situações, essas classes são conhecidas como:
+e) Abstratas
+
+Na programação orientada à objetos, como se denomina a capacidade de impedir acesso a atributos ou
+métodos dentro de classes? 
+e) Encapsulamento
+
+Um dos parâmetros mais poderosos da programação orientada a objetos possibilita o reaproveitamento de atributos e
+métodos, otimizando o tempo de desenvolvimento, além de permitir a diminuição de linhas de códigos, bem como facilitar
+futuras manutenções. É um conceito que trabalha com superclasses e subclasses. A grande vantagem pode ser caracterizada
+conforme descrito a seguir.
+I. Uma classe é declarada com atributos e métodos específicos.
+II. Em seguida, uma subclasse é derivada da classe criada.
+III. Como consequência, não há necessidade de redeclarar os atributos e métodos previamente definidos.
+IV. A subclasse recebe os atributos e métodos, permitindo uma reutilização do código já pronto.
+e) Herança
+
+Considere as informações abaixo:
+Pessoa - $nome - $idade - $sexo - $endereço
+Tendo como referência as informações acima, julgue o item a seguir, com base na orientação a objetos.
+“nome é uma herança de outra classe”
+b) Errado
+
+Considere as informações abaixo:
+Pessoa - $nome - $idade - $sexo - $endereço
+Tendo como referência as informações acima, julgue o item a seguir, com base na orientação a objetos.
+“idade e endereço são considerados atributos”
+a) Certo
+
+De acordo com as definições de Programação Orientada a Objetos, o princípio do encapsulamento destaca-se com as
+assertivas a seguir:
+I - Serve para controlar o acesso aos atributos e métodos de uma classe.
+II - Tem por significado separar o programa em partes, o mais isolado possível.
+III - Tornar o software fácil de atualizar, mais flexível e de criar novas implementações.
+IV - Representa uma forma eficiente de proteger os dados manipulados dentro da classe, além de determinar onde a
+mesma poderá ser modificada.
+Dentre as assertivas apresentadas, quais são VERDADEIRAS:
+d) Apenas I, III, IV
+
+Considerando as classes do slide anterior, responda:
+A relação entre a classe Soma e a classe OperacaoMatematica é de:
+a) Herança
+
+Considerando as classes do slide 11, responda:
+A função calcular implementa um exemplo do conceito de:
+d) Recursividade
+
+Na programação orientada a objetos, são características dos objetos:
+c) O encapsulamento, herança e polimorfismo
+

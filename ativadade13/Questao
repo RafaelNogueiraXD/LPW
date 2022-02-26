@@ -1,0 +1,108 @@
+1)
+		public function insere($carro){
+			$stmt = $conect->prepare("insert into carro (placa, cor, defeito) VALUES (?, ?, ?)");
+			$stmt->bindValue(1, 'gxhs-3124');
+			$stmt->bindValue(2, 'preto');
+			$stmt->bindValue(3, 'porta-malas');
+			$stmt->execute();
+		}
+
+2)     
+ // Como não estava especificado na questão 2 que os dados inseridos deveriam vir do objeto da classe 'Carro' eu realizei do jeito mais simples.
+ <?php
+include "conecta.php";
+	$car = new carrosSQL;
+	$carro = new Carro;
+	$car->insere($carro);
+	class Carro{
+		private $placa,$cor, $defeito;
+
+		public function setPlaca($placa){
+			$this->placa = $placa;
+		}
+		public function getPlaca(){
+			return $this->placa;
+		}
+		public function setCor($cor){
+			$this->cor = $cor;
+		}
+		public function getCor(){
+			return $this->cor;
+		}
+		public function setDefeito($defeito){
+			$this->defeito = $defeito;
+		}
+		public function getDefeito(){
+			return $this->defeito;
+		}
+	}
+	class carrosSQL{
+		private $conecta;
+		private $con;
+		public function __construct(){
+			$this->conecta = new Conecta();
+			$this->con = $this->conecta->conectar();
+		}
+		
+		public function insere($carro){
+			$stmt = $this->con->prepare("insert into carro (placa, cor, defeito) VALUES (?, ?, ?)");
+			$stmt->bindValue(1, '$carro[1]');
+			$stmt->bindValue(2, '$carro[2]');
+			$stmt->bindValue(3, '$carro[3]');
+			$stmt->execute();
+		}	
+	}	
+?>
+
+3) É evidente que dará primeiramente um erro evidenciando a falta de paramentros no codigo "$carro->setPlaca();", pois no prórprio enunciado a função setPlaca pede
+o parametro '$placa'. A função na classe a qual eu me refiro é:
+        public function setPlaca($placa){
+			$this->placa = $placa;
+		}
+Mensagem que será exibida:
+Fatal error: Uncaught ArgumentCountError: Too few arguments to function Carro::setPlaca(), 0 passed in C:\xamppp\htdocs\www\lpw\ativadade13\index.php on line 5 and exactly 1 expected in C:\xamppp\htdocs\www\lpw\ativadade13\index.php:10 Stack trace: #0 C:\xamppp\htdocs\www\lpw\ativadade13\index.php(5): Carro->setPlaca() #1 {main} thrown in C:\xamppp\htdocs\www\lpw\ativadade13\index.php on line 10
+4)
+<?php 
+include "conecta.php";
+include "pedidos.php";
+
+$pedidosDao = new PedidosDao();
+$pedidos = $pedidosDao->buscaTudo();
+    foreach($pedidos as $p){
+        echo $p->getIdProduto()."<br>".$p->getQuantidade();  
+    }   
+
+?>
+5) Letra c é a correta.
+
+6) A mensagem apresentada na tela será "Gastro"
+
+7)
+
+class Usuário{
+    public $a,$b,$c; 
+    
+    public function __construct($a,$b,$c){
+        $this->a = $a;
+        $this->b = $b;
+        $this->c = $c;
+    }
+}
+8)
+$usu = new Usuário('a','b','c');
+
+9)será apresentado a mensagem:
+Vermelho
+
+10)Na linha 28 é feito um while dentro da função 'buscaTudo', a condição desse while é que enquanto '$linha' receber os itens sendo filtrados pela função fetch no objeto $stmt ele continuará.
+Na linha 29 é estanciado a classe Produto a qual é armazenada na variavel $produto.
+Linha 30 em branco
+Linha 31 por meio da variavel $produto é chamado o metodo setIdProduto e nele é colocado o paramentro "$linha['productID']"
+Linha 32 por meio da variavel $produto é chamado o metodo setIdEmpresa e nele é colocado o paramentro "$linha['SupplierID']"
+Linha 33 por meio da variavel $produto é chamado o metodo setIdCategoria e nele é colocado o paramentro "$linha['CategoryID']"
+Linha 34 por meio da variavel $produto é chamado o metodo setNomeProduto e nele é colocado o paramentro "$linha['ProductName']"
+Linha 35 por meio da variavel $produto é chamado o metodo setPrecoUnitario e nele é colocado o paramentro "$linha['UnitPrice']"
+Linha 36 por meio da variavel $produto é chamado o metodo setQuantidade e nele é colocado o paramentro "$linha['QuantityPerUnit']"
+Linha 37 por meio da variavel $produto é chamado o metodo setUnidadesEstocadas e nele é colocado o paramentro "$linha['UnitsInStock']"
+Linha 38 em branco
+Linha 39 a variavel $produto é colocada no array $produtos.

@@ -1,0 +1,15 @@
+
+Associação seria um dos metodos mais comuns a serem utilizados, pois ele tem um papel muito bom em qualquer sistema, um exemplo que esse metodo pode ser utilizado é 
+quando sistema permite que o usuário tenha várias contas,assim como Associação o metode de composição é bastante utilizado, principalmente para boas praticas, onde o 
+objetivo é não manter um execesso de informações em uma mesma classe e sim reditribuir isso, como exemplo, uma classe pessoa que possui dados como (nome,idade,RG) e outra
+classe apenas para informações estéticas dessa pessoa (altura,peso,pele,cor dos olhos,cor do cabelo).Agregação é um metodo muito bom e facil de ser aplicado, pois tem
+como papel a relação de duas classes onde uma não depende de outra, por exemplo, computador e jogos, o computador não precisa ter jogos e os jogos não precisam de um 
+computador para funcionarem(pois tem consoles e outras plataformas) porém um computador pode ter jogos
+
+
+
+/* minha legenda
+associação - 1 - 1
+composição - obj depende de outro
+agregação - objetos associados mas que não precisam um do outro
+*/
